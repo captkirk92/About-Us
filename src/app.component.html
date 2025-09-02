@@ -1,0 +1,99 @@
+<div class="bg-white text-gray-800">
+  <app-header></app-header>
+
+  <main class="flex flex-col flex-grow">
+    <!-- About Us Hero -->
+    <section class="relative bg-gray-900 text-white py-20 md:py-32">
+      <div class="absolute inset-0">
+        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Our team working" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+      </div>
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter">About StickerVerse</h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          We're a passionate team of creators, designers, and print geeks dedicated to one thing: helping you make custom stickers that kick ass.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div class="md:w-1/2">
+            <img src="https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Creative collaboration" class="rounded-2xl shadow-xl w-full">
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900">From a Garage to the Galaxy of Stickers</h2>
+            <p class="mt-4 text-lg text-gray-600">
+              StickerVerse started in a small garage with a big dream: to make high-quality, custom stickers accessible to everyone. We were tired of complicated ordering processes, low-quality materials, and boring designs. So, we built the platform we wished existed.
+            </p>
+            <p class="mt-4 text-lg text-gray-600">
+              Today, we've shipped millions of stickers to artists, brands, and makers around the world. But our core mission remains the same: to provide the best materials, the simplest process, and the most stellar customer service in the universe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900">What We Stand For</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+          Our values guide every decision we make, from the materials we source to the way we support our customers.
+        </p>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+          @for(value of companyValues(); track value.title) {
+            <div class="flex flex-col items-center">
+              <div class="bg-yellow-400 p-4 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+                  <path [attr.d]="value.icon"></path>
+                </svg>
+              </div>
+              <h3 class="mt-5 text-2xl font-black text-gray-900">{{ value.title }}</h3>
+              <p class="mt-2 text-gray-600">{{ value.description }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+    
+    <!-- Meet the Team Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900">Meet Some of the Crew</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+          We're a diverse crew of makers and problem-solvers who love what we do.
+        </p>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          @for(member of teamMembers(); track member.name) {
+            <div class="group">
+              <div class="aspect-square overflow-hidden rounded-2xl">
+                <img [src]="member.imageUrl" [alt]="member.name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <h3 class="mt-4 text-xl font-bold text-gray-900">{{ member.name }}</h3>
+              <p class="text-yellow-500 font-semibold">{{ member.role }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="bg-yellow-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+        <h2 class="text-4xl md:text-5xl font-black text-gray-900">Ready to Join the StickerVerse?</h2>
+        <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-800">
+          We've told you our story, now it's time to tell yours. Bring your ideas to life with the best custom stickers on the planet.
+        </p>
+        <a href="#" class="mt-8 inline-block bg-gray-900 text-white font-black py-4 px-8 rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+            Make Stickers Now
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <app-footer></app-footer>
+</div>

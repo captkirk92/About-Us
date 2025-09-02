@@ -1,0 +1,82 @@
+
+<footer class="bg-zinc-900 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <!-- Links Sections -->
+      <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div>
+          <h4 class="font-semibold mb-4">Useful links</h4>
+          <ul>
+            @for(link of usefulLinks; track link.name) {
+              <li class="mb-2">
+                <a href="{{link.href}}" class="hover:text-yellow-400 transition-colors">{{ link.name }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Support</h4>
+          <ul>
+            @for(link of supportLinks; track link.name) {
+              <li class="mb-2">
+                <a href="{{link.href}}" class="hover:text-yellow-400 transition-colors">{{ link.name }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul>
+            @for(link of companyLinks; track link.name) {
+              <li class="mb-2">
+                <a href="{{link.href}}" class="hover:text-yellow-400 transition-colors">{{ link.name }}</a>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter and Social -->
+      <div class="md:col-span-5">
+        <h4 class="font-semibold mb-2">Stay connected with StickerApp</h4>
+        <p class="text-sm text-gray-400 mb-4">Sign up to our email list for insider deals, tips and inspiration.</p>
+        <div class="flex items-start mb-4">
+          <input type="checkbox" id="consent" class="mt-1 h-4 w-4 rounded border-gray-300 text-yellow-400 focus:ring-yellow-400">
+          <label for="consent" class="ml-2 text-xs text-gray-400">
+            I consent that StickerApp Inc may process my personal data for the purpose of direct marketing. I can unsubscribe anytime via link in email and read details in StickerApp’s Privacy Policy.
+          </label>
+        </div>
+        <form class="flex flex-col sm:flex-row gap-2 mb-8">
+          <input type="email" placeholder="Email" class="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          <button type="submit" class="bg-yellow-400 text-gray-900 font-bold px-6 py-2 rounded-md hover:bg-yellow-500 transition-colors">SUBSCRIBE</button>
+        </form>
+        <div class="flex justify-center md:justify-start space-x-6 items-center">
+            <!-- Social Icons -->
+            <a href="#" aria-label="Instagram"><img src="https://stickerapp.com/media/32x30/0d3bac0c35/white-ic-som-instagram.svg" class="h-6" alt="Instagram"></a>
+            <a href="#" aria-label="Facebook"><img src="https://stickerapp.com/media/30x28/885aa3c949/white-ic-som-facebook.svg" class="h-6" alt="Facebook"></a>
+            <a href="#" aria-label="YouTube"><img src="https://stickerapp.com/media/34x24/89ef8a3eb0/white-ic-som-youtube.svg" class="h-5" alt="YouTube"></a>
+            <a href="#" aria-label="LinkedIn"><img src="https://stickerapp.com/media/28x28/3649f38bad/white-ic-som-linkedin.svg" class="h-6" alt="LinkedIn"></a>
+            <a href="#" aria-label="X"><img src="https://stickerapp.com/media/28x28/397b48854a/white-ic-som-x.svg" class="h-6" alt="X"></a>
+            <a href="#" aria-label="Pinterest"><img src="https://stickerapp.com/media/28x28/851da58739/white-ic-som-pinterest.svg" class="h-6" alt="Pinterest"></a>
+            <a href="#" aria-label="TikTok"><img src="https://stickerapp.com/media/25x28/0f10792d9a/white-ic-som-tiktok.svg" class="h-6" alt="TikTok"></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <div class="flex items-center space-x-4 mb-6 md:mb-0">
+            <img src="https://stickerapp.com/media/63x25/c04fe6ae2b/payment-method-applepay-icon-white-63x25.png" alt="Apple Pay" class="h-6">
+            <img src="https://stickerapp.com/media/103x25/d78b6ad3da/payment-method-paypal-icon-white-103x25.png" alt="PayPal" class="h-6">
+            <img src="https://stickerapp.com/media/60x19/1d799dfefd/payment-method-visa-icon-white-60x19.png" alt="Visa" class="h-5">
+            <img src="https://stickerapp.com/media/134x24/1529ca8fbd/payment-method-mastercard-icon-white-123x24.png" alt="Mastercard" class="h-6">
+        </div>
+        <div class="w-full md:w-auto mb-6 md:mb-0">
+            <label for="region" class="sr-only">Region</label>
+            <select id="region" class="bg-gray-800 border border-gray-600 rounded-md py-2 px-4 w-full text-white">
+                <option>https://stickerapp.com/</option>
+            </select>
+        </div>
+        <p class="text-gray-400">&copy; StickerApp 2025</p>
+    </div>
+  </div>
+</footer>

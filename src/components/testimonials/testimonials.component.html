@@ -1,0 +1,93 @@
+<section class="bg-white py-20 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+    <div class="flex flex-col items-center justify-center max-w-2xl mx-auto text-center">
+      <div class="border border-gray-300 py-1 px-4 rounded-lg text-sm font-semibold text-gray-700">Testimonials</div>
+      <h2 class="text-4xl md:text-5xl font-black text-gray-900 mt-5">
+        What our users say
+      </h2>
+      <p class="text-center mt-5 text-lg text-gray-600">
+        See what our customers have to say about us.
+      </p>
+    </div>
+
+    <div class="relative flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+      <!-- Column 1 -->
+      <div class="flex flex-col gap-6 pb-6">
+        <div class="flex flex-col gap-6 animate-marquee-vertical" style="--duration: 25s;">
+          @for (_ of [1, 2]; track $index) {
+            @for (testimonial of firstColumn; track testimonial.name) {
+              <div class="p-6 md:p-8 rounded-2xl border border-gray-200 shadow-lg shadow-yellow-400/10 w-full max-w-xs bg-white">
+                <p class="text-gray-700">{{ testimonial.text }}</p>
+                <div class="flex items-center gap-3 mt-5">
+                  <img
+                    width="40"
+                    height="40"
+                    [src]="testimonial.image"
+                    [alt]="testimonial.name"
+                    class="h-10 w-10 rounded-full object-cover"
+                  />
+                  <div class="flex flex-col text-left">
+                    <div class="font-bold text-gray-900 tracking-tight leading-5">{{ testimonial.name }}</div>
+                    <div class="leading-5 text-gray-500 tracking-tight text-sm">{{ testimonial.role }}</div>
+                  </div>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="hidden md:flex flex-col gap-6 pb-6">
+        <div class="flex flex-col gap-6 animate-marquee-vertical-reverse" style="--duration: 30s;">
+          @for (_ of [1, 2]; track $index) {
+            @for (testimonial of secondColumn; track testimonial.name) {
+              <div class="p-6 md:p-8 rounded-2xl border border-gray-200 shadow-lg shadow-yellow-400/10 w-full max-w-xs bg-white">
+                <p class="text-gray-700">{{ testimonial.text }}</p>
+                <div class="flex items-center gap-3 mt-5">
+                  <img
+                    width="40"
+                    height="40"
+                    [src]="testimonial.image"
+                    [alt]="testimonial.name"
+                    class="h-10 w-10 rounded-full object-cover"
+                  />
+                  <div class="flex flex-col text-left">
+                    <div class="font-bold text-gray-900 tracking-tight leading-5">{{ testimonial.name }}</div>
+                    <div class="leading-5 text-gray-500 tracking-tight text-sm">{{ testimonial.role }}</div>
+                  </div>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="hidden lg:flex flex-col gap-6 pb-6">
+        <div class="flex flex-col gap-6 animate-marquee-vertical" style="--duration: 28s;">
+          @for (_ of [1, 2]; track $index) {
+            @for (testimonial of thirdColumn; track testimonial.name) {
+              <div class="p-6 md:p-8 rounded-2xl border border-gray-200 shadow-lg shadow-yellow-400/10 w-full max-w-xs bg-white">
+                <p class="text-gray-700">{{ testimonial.text }}</p>
+                <div class="flex items-center gap-3 mt-5">
+                  <img
+                    width="40"
+                    height="40"
+                    [src]="testimonial.image"
+                    [alt]="testimonial.name"
+                    class="h-10 w-10 rounded-full object-cover"
+                  />
+                  <div class="flex flex-col text-left">
+                    <div class="font-bold text-gray-900 tracking-tight leading-5">{{ testimonial.name }}</div>
+                    <div class="leading-5 text-gray-500 tracking-tight text-sm">{{ testimonial.role }}</div>
+                  </div>
+                </div>
+              </div>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
